@@ -1,0 +1,177 @@
+.attribution { font-size: 14px; text-align: center; margin-top: 2rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set max-width to 100%, so it does not overflow the container */
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Always set min-height and to turn it to a mobile version set it pixels*/
+    min-height: calc(100vh - 0.1px);
+    margin: 0 1.5rem;
+ }
+
+
+/* It inherits the font-family of the body */
+ button, li {
+    font-family: inherit;
+ }
+
+ h1 {
+  color:hsl(212, 21%, 14%);
+ }
+
+ h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5rem;
+ }
+
+ h1, .price {
+    font-family: 'Fraunces', serif;
+ }
+
+p {
+    color:hsl(228, 12%, 48%);
+    line-height: 1.8;
+}
+
+/* To remove bullets */
+
+ul{
+    list-style-type: none;
+}
+
+/* TO STOP CONTAINER FROM OVERFLOWING: set its  max-width to a number */
+
+.container {
+    max-width: 600px;
+}
+
+.container h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.container p {
+    margin-bottom: 2rem;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* To access the first price */
+
+.container ul li:first-child {
+font-size: 2rem;
+margin-right: 2rem;
+}
+
+/* To access the old price */
+.container ul li:nth-last-child(1) {
+    color: hsl(228, 12%, 48%);
+
+}
+
+.container article:first-child img {
+    border-radius:1rem 1rem 0 0;
+    
+}
+
+/* Setting a different color for the last child of the container */
+.container article:last-child {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius:0 0 1rem 1rem;
+    /* removes the white space */
+    margin-top: -1rem;
+}
+
+.container .btn {
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0.625rem;
+
+    /* To center the icon element with the text on the button, use flex */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .btn img {
+    margin-right: 0.5rem;
+}
+
+.container .btn:hover {
+    background-color: hsl(158, 29%, 27%);
+}
+
+ .price {
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+ }
+
+
+ @media (min-width:640px) {
+
+   picture img {
+    height: 100%;
+   }
+
+    .container {
+        display: grid;
+        /* repeat twice with 1 fraction of a column each */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container article:first-child img {
+        border-radius: 0.625rem 0 0 0.625rem;
+        height: 100%;
+    }
+
+    .container article:last-child  {
+        border-radius: 0 0.625rem 0.625rem 0;
+    }
+
+    .container p {
+        margin-bottom: 1rem;
+      }
+   
+
+    
+ }
+
+ 
+
